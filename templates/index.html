@@ -126,13 +126,30 @@
                 Was Our Application Helpful?
                 <p class="fs-325 ff-normal">We use this Feedback to improve our services</p>
             </div>
-            <div class="contact-form">
-                <textarea placeholder="Leave Us Comments" rows="3"></textarea><br>
+            <form action="/feed_submit" method="POST" class="contact-form">
+                <input placeholder="email" name="email"><br>
+                <textarea placeholder="Leave Us Comments" name="comment" rows="3"></textarea><br>
                 <button type="submit">Send Feedback</button> 
-            </div>
+            </form>
         </div>
     </section>
     <!-- /Contacts -->
+
+    {% if error %}
+    <div class=" error flex">
+        <p id="error" class="ff-normal flex fs-300"><span style="color: red; display: grid; text-align: center; align-content: center;">{{ error }}</span>
+            <button id="btn" class="ff-normal fs-300" onclick="deleteParagraph()"><i class="fa-solid fa-xmark"></i></button>
+        </p>
+    </div>
+    {% endif %}     
+
+    {% if result %}
+    <div class=" error flex">
+        <p id="error" class="ff-normal flex fs-300"><span style="color: rgba(28, 255, 39,1); display: grid; text-align: center; align-content: center;">{{ result }}</span>
+            <button id="btn" class="ff-normal fs-300" onclick="deleteParagraph()"><i class="fa-solid fa-xmark"></i></button>
+        </p>
+    </div>
+    {% endif %}    
 
     <!-- Footer -->
     <section id="footer">
@@ -165,5 +182,8 @@
             </div>
         </div>
     </section>
+
+    <!-- JavaScript -->
+    <script src="../static/script.js"></script>
 </body>
 </html>

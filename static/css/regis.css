@@ -80,6 +80,12 @@ p {
 .ff-serif { font-family: 'Bree Serif', serif; }
 .ff-normal { font-family: 'Roboto Slab', serif; }
 
+.primary-header{
+    height: 56.8px;
+}
+.primary-header nav {
+    padding:  0px;
+}
 
 .regis-form-container{
     padding: 2.6rem 5rem;
@@ -161,14 +167,14 @@ span{
     justify-content: right;
 }
 
-.error{
+#error{
     margin: auto;
     justify-content: center;
     height: 36px;
     width: 250px;
     border-radius: 5px;
 }
-#error{
+#error p{
     justify-content: center;
     gap: 0.3rem;
 }

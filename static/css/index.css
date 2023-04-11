@@ -316,7 +316,6 @@ p {
 }
 .contact-main{
     padding: 1.25rem 5rem;
-    gap: 2.25rem;
 }
 .contact-header{
     justify-content: center;
@@ -333,11 +332,28 @@ p {
     padding: 0.75rem 0;
     justify-content: center;
     text-align: center;
+    
+}
+
+.contact-form input{
+    width: 500px;
+    height: 36px;
+    padding: 0.9em 0.7em;
+    font-family: 'Roboto Slab', serif;
+    font-size: 16px;
+    background: #f3f3f3;
+    outline: none;
+    border: none;
+    border-left: 2px solid #01A4E4;
+    border-radius: 0px;
+    outline: none !important;
+    box-shadow: 0px 0px 3px #bdbcbc;
 }
 .contact-form textarea{
     width: 500px;
     height: 90px;
     font-size: 14px;
+    resize: none;
     color: #000;
     padding: 0.9em 0.7em;
     font-family: 'Roboto Slab', serif;
@@ -405,4 +421,23 @@ p {
 }
 .footer-copyright{
     font-weight: 600;
+}
+
+/* errors */
+.error{
+    margin: auto;
+    justify-content: center;
+    height: 36px;
+    width: 320px;
+    border-radius: 5px;
+}
+#error{
+    justify-content: center;
+    gap: 0.3rem;
+}
+#btn{
+    outline: none;
+    border: none;
+    background-color: #fff;
+    color: #1678F2;    
 }
