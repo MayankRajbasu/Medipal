@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!--Custom Css-->
+    <link href="../static/css/index.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="../static/css/regis.css" rel="stylesheet" type="text/css" media="all" />
+
+    <title>Register</title>
+</head>
+
+<body>
+    <div class="main-top">
+        <div class="primary-header flex">
+            <div>
+                <a href="/"><span class="logo"></span></a>
+            </div>
+            <nav>
+                <ul id="primary-navigation" data-visible="false" class="primary-navigation flex">
+                    <form><button class="ff-normal fs-300 navbtn" formaction="{{url_for('home')}}">Home</button></form>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    {% if error %}
+    <div class=" error flex">
+        <p id="error" class="ff-normal flex fs-300"><span style="color: red; display: grid; text-align: center; align-content: center;">{{ error }}</span>
+            <button id="btn" class="ff-normal fs-300" onclick="deleteParagraph()"><i class="fa-solid fa-xmark"></i></button>
+        </p>
+    </div>
+    {% endif %}
+    <div class="regis-form-container flex">
+        <div class="side-img-div">
+            <div class="reg-img"></div>
+        </div>
+
+        <div class="form-div">
+            <div class="ff-serif"><u>Register as Doctor</u></div>
+            <form action="reg_submit" method="POST">
+                <input class="forminput" type="text" name="name" placeholder="FullName"><br><br><!-- comment -->
+                <input class="forminput" type="text" maxlength="10" name="phone" placeholder="Phone"><br><br>
+                <!-- <label class="ff-normal" style="font-size: 17px">Designation</label>&nbsp;&nbsp;
+                <input id="rd" type="radio" name="desg" value="Student"><span class="ff-normal" style="font-size: 17px">Student</span>&nbsp;&nbsp;
+                <input id="rd" type="radio" name="desg" value="Researcher"><span class="ff-normal" style="font-size: 17px">Researcher</span>&nbsp;&nbsp;
+                <input id="rd" type="radio" name="desg" value="Software Engineer"><span class="ff-normal" style="font-size: 17px">Software Engineer</span><br><br> -->
+
+                <input class="forminput" type="text" name="email" placeholder="Email"><br><br>
+                <input class="forminput" type="text" name="speciality" placeholder="Speciality"><br><br>
+                <input class="forminput" type="text" name="licence" placeholder="Doctor's Liscence"><br><br>
+                <input class="forminput" type="number" name="years" placeholder="Years of Experience"><br><br>
+
+                <button type="submit" name="btn" value="Submit">Submit</button><br>
+            </form>
+            <!-- <a href="/login " ><span>Already Registered?</span></a> -->
+        </div>
+    </div>
+
+    <script src="../static/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Consult Doctor</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+
+    <!-- Jquery -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Custom Css -->
+    <link href="../static/css/predict.css" rel="stylesheet" type="text/css" media="all" />
+
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />        
+
+    <!-- google-fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Roboto+Slab&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <div class="main-top">
+        <div class="primary-header flex">
+            <div>
+                <a href="/"><span class="logo"></span></a>
+            </div>
+            <!-- button-nav -->
+            <!-- <button type="button" class="nav-toggler" aria-controls="primary-navigation" aria-expanded="false">
+                    <span></span>
+                </button> -->
+            <!-- Navigation -->
+            <nav>
+                <ul id="primary-navigation" data-visible="false" class="primary-navigation flex">
+                    <li><a class=" active ff-normal fs-300 " href="/">Home</a></li>
+                    <li><a class="ff-normal fs-300 " href="/#contacts">Contact</a></li>
+                    <form><button class="ff-normal fs-300 navbtn" formaction="{{url_for('home')}}">Login</button>
+                    </form>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <!-- /Header -->
+
+    <!-- Services -->
+    <section id="service">
+        <div class="service-main grid">
+            <div class="service-header flex ff-serif">Our Services</div>
+            <div class="service-container flex">
+                <div class="service-container-box grid">
+                    <div class="service-img-container">
+                        <a href="/Consult"><span class="service-img-1"></span></a>
+                    </div>
+                    <div class="service-text-container">
+                        <p class="ff-serif fs-325"><a href="/Consult">Consult Doctor</a></p>
+                    </div>
+                </div>
+
+                <div class="service-container-box grid">
+                    <div class="service-img-container">
+                        <a href="/Consult"><span class="service-img-1"></span></a>
+                    </div>
+                    <div class="service-text-container">
+                        <p class="ff-serif fs-325"><a href="/Consult">Consult Doctor</a></p>
+                    </div>
+                </div>
+
+                <div class="service-container-box grid">
+                    <div class="service-img-container">
+                        <a href="/Predict"><span class="service-img-2"></span></a>
+                    </div>
+                    <div class="service-text-container">
+                        <p class="ff-serif fs-325"><a href="/Predict">Predict Disease</a></p>
+                    </div>
+                </div>
+
+                <div class="service-container-box grid">
+                    <div class="service-img-container">
+                        <a href="/Predict"><span class="service-img-2"></span></a>
+                    </div>
+                    <div class="service-text-container">
+                        <p class="ff-serif fs-325"><a href="/Predict">Predict Disease</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /Services -->       
+    
+    <!-- Footer -->
+    <section id="footer">
+        <div class="footer-main grid">
+            <div class="footer-social-container flex">
+                <div class="footer-social-div">
+                    <a href ="#"><i class="fa-brands fa-facebook"></i></a>
+                </div>
+                <div class="footer-social-div">
+                    <a href ="#"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+                <div class="footer-social-div">
+                    <a href ="#"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+                <div class="footer-social-div">
+                    <a href ="#"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+                <div class="footer-social-div">
+                    <a href ="#"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-about flex ff-serif fs-300">
+                Empowering Your Health with AI <br>Get Accurate Disease Predictions with MediPal.
+            </div>
+            <div class="footer-logo-container flex">
+                <a href="/"><span class="footer-logo"></span></a>
+            </div>
+            <div class="footer-copyright grid ff-normal fs-200">
+                Copyright © 2023, Medipal. All rights reserved.
+            </div>
+        </div>
+    </section>
+    <!-- /Footer -->
+        
+</body>
+</html>

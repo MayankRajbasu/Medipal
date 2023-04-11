@@ -1,0 +1,243 @@
+/* font-size */
+.fs-800 { font-size: 6.25rem; }
+.fs-700 { font-size: 3.5rem; }
+.fs-600 { font-size: 3rem ;}
+.fs-550 { font-size: 2.5rem;}
+.fs-500 { font-size: 2rem; }
+.fs-400 { font-size: 1.75rem; }
+.fs-350 {font-size: 1.5rem;}
+.fs-325 {font-size: 1.3125rem;}
+.fs-300 { font-size: 1.125rem; }
+.fs-200 { font-size: 1rem; }
+.fs-100 { font-size: 0.875rem; }
+
+
+/* font-family */
+.ff-serif { font-family: 'Bree Serif', serif; }
+.ff-normal { font-family: 'Roboto Slab', serif; }
+
+/* box-sizing */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+/* letter-space */
+.letter-spacing-1 { letter-spacing: 4.75px; } 
+.letter-spacing-2 { letter-spacing: 2.7px; } 
+.letter-spacing-3 { letter-spacing: 2.35px; } 
+
+
+/* letter-form */
+.uppercase {text-transform: uppercase;}
+.capitalize{text-transform: capitalize;}
+.justify{ justify-content: center;}
+.space{justify-content: space-between;}
+/* Scroll behavior */
+html{
+scroll-behavior: smooth;
+}
+
+/* reset-margins */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+ul,
+figure,
+picture {
+    margin: 0; 
+}
+
+/* font-weight */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    font-weight: 400;
+}
+
+/* general */
+.flex {
+    display: flex;
+    gap: var(--gap, 1.15rem); 
+}
+.grid {
+    display: grid;
+    gap: var(--gap, 1rem);
+}
+
+
+/* Header */
+.primary-header div{
+    padding-left: 4.5rem;
+}
+.logo{
+    background: url(../img/logo.png) no-repeat center / cover;
+    position: relative;
+    width: 160px;
+    height: 45px;
+    display: block;
+    cursor: pointer;
+}
+.primary-header{
+    /* position: fixed; */
+    width: 100%;
+    align-items: center;
+    z-index: 9999;
+    justify-content: space-between;
+    background: #FAFAFA;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.10);
+    /* filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)); */
+}
+.primary-header nav{
+    padding: 8px 0px;
+}
+.primary-navigation{
+    list-style: none;
+    padding-right: 4.5rem;
+}
+.primary-navigation li {
+    padding: 8px 0px;
+}
+.primary-navigation li a{
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.9);
+    transition: all 0.3s ease;
+    text-align: center;
+}
+.primary-navigation li a.active,
+.primary-navigation li a:hover{
+    color: #01A4E4;
+}
+
+.navbtn{
+    padding: 8px 0px;
+    width: 90px;
+    height: 40px;
+    color: #fff;
+    outline: none;
+    border: none;
+    /* font-size: 26px; */
+    border-radius: 5px;
+    background: #01A4E4;
+    cursor: pointer;
+}
+
+/* Predict Disease */
+#service{
+    padding: 0px 50px;
+    width: 100%;
+    min-height: 520px;
+    background: #fff ;
+}
+.service-main{
+    padding: 1.25rem 5rem;
+    gap: 2.25rem;
+}
+.service-header{
+    justify-content: center;
+    font-size: 2.7rem;
+}
+.service-container{
+    width: 100%;
+    justify-content: center;
+    gap: 2.25rem;
+}
+.service-container-box{
+    width: 280px;
+    height: 360px;
+    background: rgba(1, 164, 228, 0.5);
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    gap: 0px;
+}
+.service-img-container{
+    padding: 0.7rem 0.3rem;
+    width: 100%;
+    height: 280px;
+    border-radius: 15px 15px 0px 0px;
+    display: grid;
+    align-content: center;
+}
+.service-img-1{
+    background: url(../img/img-3.png) no-repeat center;
+    background-size: cover;
+    width: 100%;
+    height: 240px;
+    display: block;
+    cursor: pointer;
+}
+.service-img-2{
+    background: url(../img/img-4.png) no-repeat center;
+    background-size: cover;
+    width: 100%;
+    height: 215px;
+    display: block;
+    cursor: pointer;
+}
+.service-text-container{
+    width: 100%;
+    height: 80px;
+    background: rgba(255, 255, 255);
+    border-radius: 0px 0px 15px 15px;  
+    display: grid;
+    align-content: center;
+    text-align: center;
+    cursor: pointer;
+}
+.service-text-container a{
+    text-decoration: none;
+    color: #1678F2;
+}
+
+/* footer */
+
+#footer{
+    padding: 15px 50px;
+    width: 100%;
+    min-height: 200px;
+    display: grid;
+    align-content: center;
+    background: #1678F2 ;
+}
+.footer-main{
+    display: grid;
+    gap: 0.75rem;
+    justify-content: center;
+    text-align: center;
+}
+.footer-social-container{
+    justify-content: center;
+}
+.footer-social-div{
+    height: 25px;
+    width: 25px;
+}
+.footer-social-div a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 25px;
+}
+.footer-logo-container{
+    justify-content: center;
+}
+.footer-logo{
+    background: url(../img/logo-w.png) no-repeat center / cover;
+    position: relative;
+    width: 160px;
+    height: 45px;
+    display: block;
+    cursor: pointer;
+}
+.footer-copyright{
+    font-weight: 600;
+}

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Custom Css-->
+    <link href="../static/css/index.css" rel="stylesheet" type="text/css" media="all" />
+
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />    
+
+    <!-- google-fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Roboto+Slab&display=swap" rel="stylesheet">
+
+    <title>MediPal</title>
+</head>
+
+<body>
+    <!-- Hero -->
+    <div class="main-top">
+        <!-- Header -->
+        <div class="primary-header flex">
+            <div>
+                <a href="/"><span class="logo"></span></a>
+            </div>
+            <!-- button-nav -->
+            <!-- <button type="button" class="nav-toggler" aria-controls="primary-navigation" aria-expanded="false">
+                <span></span>
+            </button> -->
+            <!-- Navigation -->
+            <nav>
+                <ul id="primary-navigation" data-visible="false" class="primary-navigation flex">
+                    <li><a class=" active ff-normal fs-300 " href="/">Home</a></li>
+                    <li><a class="ff-normal fs-300 " href="#about">About Us</a></li>
+                    <li><a class="ff-normal fs-300 " href="#service">Services</a></li>
+                    <li><a class="ff-normal fs-300 " href="#contacts">Contact</a></li>
+                    <form><button class="ff-normal fs-300 navbtn" formaction="{{url_for('login')}}">Login</button>
+                    </form>
+                </ul>
+            </nav>
+        </div>
+        <!-- /Header -->
+        <!-- Hero Banner -->
+        <div class="grid-container">
+            <div class="hero-banner">
+                <div class="hero-header flex space">
+                    <div class="hero-header-text">
+                        <h1 class="ff-serif fs-600">Better Health Better Life</h1>
+                        <p class="ff-normal fs-325">Your Health is your Wealth</p>
+                        <span class="flex">
+                            <p class="ff-normal fs-325">Any Symptoms?</p>
+                            <button class="ff-normal fs-325 hero-btn" formaction="{{url_for('register')}}">Predict
+                                It</button>
+                        </span>
+                    </div>
+                    <div class="hero-header-imgcontainer">
+                        <div class="hero-header-img"></div>
+                    </div>
+                </div>
+                <div class="hero-fotter grid">
+                    <div class="hero-fotter-text">
+                        <p class="ff-serif fs-325">Based on Trained Machine Learning Model</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /Hero Banner -->
+    </div>
+    <!-- /Hero -->
+
+    <!--About Us-->
+    <section id="about">
+        <div class="about-main">
+            <div class="about-img-div">
+                <div class="about-img"></div>
+            </div>
+            <div class="about-div">
+                <h1 class="ff-serif fs-550 letter-spacing-3">Who are we?</h1>
+                <p class="ff-normal fs-300 ">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                    industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
+                    and scrambled it to make a type specimen book. It has survived not only five centuries, but also the
+                    leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s
+                    with the release of Letraset sheets containing.
+                </p>
+            </div>
+        </div>
+    </section>
+    <!-- /About Us-->
+
+    <!-- Services -->
+    <section id="service">
+        <div class="service-main grid">
+            <div class="service-header flex ff-serif">Our Services</div>
+            <div class="service-container flex">
+                <div class="service-container-box grid">
+                    <div class="service-img-container">
+                        <a href="/Consult"><span class="service-img-1"></span></a>
+                    </div>
+                    <div class="service-text-container">
+                        <p class="ff-serif fs-325"><a href="/Consult">Consult Doctor</a></p>
+                    </div>
+                </div>
+
+                <div class="service-container-box grid">
+                    <div class="service-img-container">
+                        <a href="/Predict"><span class="service-img-2"></span></a>
+                    </div>
+                    <div class="service-text-container">
+                        <p class="ff-serif fs-325"><a href="/Predict">Predict Disease</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- /Services -->
+    
+    <section id="contacts">
+        <div class="contact-main grid">
+            <div class="contact-header ff-serif">
+                Was Our Application Helpful?
+                <p class="fs-325 ff-normal">We use this Feedback to improve our services</p>
+            </div>
+            <div class="contact-form">
+                <textarea placeholder="Leave Us Comments" rows="3"></textarea><br>
+                <button type="submit">Send Feedback</button> 
+            </div>
+        </div>
+    </section>
+    <!-- /Contacts -->
+
+    <!-- Footer -->
+    <section id="footer">
+        <div class="footer-main grid">
+            <div class="footer-social-container flex">
+                <div class="footer-social-div">
+                    <a href ="#"><i class="fa-brands fa-facebook"></i></a>
+                </div>
+                <div class="footer-social-div">
+                    <a href ="#"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+                <div class="footer-social-div">
+                    <a href ="#"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+                <div class="footer-social-div">
+                    <a href ="#"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+                <div class="footer-social-div">
+                    <a href ="#"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-about flex ff-serif fs-300">
+                Empowering Your Health with AI <br>Get Accurate Disease Predictions with MediPal.
+            </div>
+            <div class="footer-logo-container flex">
+                <a href="/"><span class="footer-logo"></span></a>
+            </div>
+            <div class="footer-copyright grid ff-normal fs-200">
+                Copyright © 2023, Medipal. All rights reserved.
+            </div>
+        </div>
+    </section>
+</body>
+</html>
