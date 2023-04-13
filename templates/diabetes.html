@@ -10,6 +10,11 @@
     <link href="../static/css/predict.css" rel="stylesheet" type="text/css" media="all" />
     <link href="../static/css/preddisease.css" rel="stylesheet" type="text/css" media="all" />
 
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <title>Predict Diabetes</title>
 </head>
 
@@ -20,15 +25,12 @@
             <div>
                 <a href="/"><span class="logo"></span></a>
             </div>
-            <!-- button-nav -->
-            <!-- <button type="button" class="nav-toggler" aria-controls="primary-navigation" aria-expanded="false">
-                    <span></span>
-                </button> -->
-            <!-- Navigation -->
             <nav>
                 <ul id="primary-navigation" data-visible="false" class="primary-navigation flex">
                     <li><a class=" active ff-normal fs-300 " href="/">Home</a></li>
-                    <li><a class="ff-normal fs-300 " href="/#contacts">Contact</a></li>
+                    <li><a class="ff-normal fs-300 " href="/Predict/cancer">Predict Cancer</a></li>
+                    <li><a class="ff-normal fs-300 " href="/Predict/liver">Predict Liver</a></li>
+                    <li><a class="ff-normal fs-300 " href="/Predict/heart">Predict Heart</a></li>
                     <form><button class="ff-normal fs-300 navbtn" formaction="{{url_for('home')}}">Login</button>
                     </form>
                 </ul>
@@ -36,31 +38,41 @@
         </div>
     </div>
     <!-- /Header -->
-    
+
     <section id="form-container">
         <div class="header ff-serif fs-500"><u>Predict about Diabetes</u></div>
-        <form  method="POST">
+
+        {% if error %}
+        <div id="error" class=" flex">
+            <p class="ff-normal flex fs-300"><span
+                    style="color: red; display: grid; text-align: center; align-content: center;">{{ error }}</span>
+                <button id="btn" class="ff-normal fs-300" onclick="deleteParagraph()"><i
+                        class="fa-solid fa-xmark"></i></button>
+            </p>
+        </div><br>
+        {% endif %}
+
+        <form method="POST">
             <div class="patient-record flex">
-            <input class="forminput" type="text" name="name" placeholder="Name"><!-- comment -->
-            <input class="forminput" type="text" name="email" placeholder="Email">
-            <input class="forminput" type="text" maxlength="10" name="phone" placeholder="Phone">
+                <input class="forminput" type="text" name="name" placeholder="Name"><!-- comment -->
+                <input class="forminput" type="text" name="email" placeholder="Email">
+                <input class="forminput" type="text" maxlength="10" name="phone" placeholder="Phone">
             </div>
             <hr class="hr">
             <div class="predict-container">
-            <input class="forminput" type="text" name="Pregnancies" placeholder="Pregnancies Count"><br><br>
-            <input class="forminput" type="text" name="Glucose" placeholder="Glucose Count "><br><br>
-            <input class="forminput" type="text" name="BloodPressure" placeholder="BP Count"><br><br>
-            <input class="forminput" type="text" name="Insulin" placeholder="Insulin Count"><br><br>
-            <input class="forminput" type="text" name="BMI" placeholder="BMI Count "><br><br>
-            <!-- <input class="forminput" type="text" name="DiabetesPedigreeFunction" placeholder="DiabetesPedigree Count"><br><br> -->
-            <input class="forminput" type="text" name="Age" placeholder="Your Age "><br><br>
+                <input class="forminput" type="text" name="Age" placeholder="Your Age "><br><br>
+                <input class="forminput" type="text" name="Pregnancies" placeholder="Pregnancies Count"><br><br>
+                <input class="forminput" type="text" name="Glucose" placeholder="Glucose Count "><br><br>
+                <input class="forminput" type="text" name="BloodPressure" placeholder="BP Count"><br><br>
+                <input class="forminput" type="text" name="Insulin" placeholder="Insulin Count"><br><br>
+                <input class="forminput" type="text" name="BMI" placeholder="BMI Count "><br><br>
             </div>
-            <button type="submit" name="btn" formaction="{{url_for('result_diabetes')}}" value="Submit">Submit</button><br>
+            <button type="submit" name="btn" formaction="{{url_for('result_diabetes')}}"
+                value="Submit">Submit</button><br>
         </form>
     </section>
 
-
-
+    <script src="../static/script.js"></script>
 </body>
 
 </html>

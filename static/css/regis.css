@@ -182,5 +182,6 @@ span{
     outline: none;
     border: none;
     background-color: #fff;
-    color: #1678F2;    
+    color: #1678F2;  
+    cursor: pointer;   
 }

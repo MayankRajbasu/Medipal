@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ post.title }}</title>
+</head>
+<body>
+
+    {% if error %}
+    <div class=" error flex">
+        <p id="error" class="ff-normal flex fs-300"><span style="color: red; display: grid; text-align: center; align-content: center;">{{ error }}</span>
+            <button id="btn" class="ff-normal fs-300" onclick="deleteParagraph()"><i class="fa-solid fa-xmark"></i></button>
+        </p>
+    </div>
+    <hr>
+    {% endif %}     
+
+    {% if result %}
+    <div id="error" class="flex">
+        <p  class="ff-normal flex fs-300"><span style="color: rgba(28, 255, 39,1); display: grid; text-align: center; align-content: center;">{{ result }}</span>
+            <button id="btn" class="ff-normal fs-300" onclick="deleteParagraph()"><i class="fa-solid fa-xmark"></i></button>
+        </p>
+    </div>
+    <hr>
+    {% endif %}    
+            
+    <div class="BlogTitle">{{ post.title }}</div>
+    <div class="About">
+        <p>{{ post.about }}</p>
+    </div>
+    <div class="Types">
+        <h1>Types of {{ post.title }}</h1>
+        <p>{{post.types1}}</p>
+        <p>{{post.types2}}</p>
+        <p>{{post.types3}}</p>
+    </div>
+    <div class="Symptoms">
+
+    </div>
+    <div class="precaution">
+        <h1>Precautions</h1>
+        <p>{{post.Precaution_head}}</p>
+        <li>{{post.Precaution1}}</li>
+        <li>{{post.Precaution2}}</li>
+        <li>{{post.Precaution3}}</li>
+        <li>{{post.Precaution4}}</li>
+        <li>{{post.Precaution5}}</li>
+    </div>
+</body>
+</html>

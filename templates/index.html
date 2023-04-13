@@ -45,6 +45,23 @@
             </nav>
         </div>
         <!-- /Header -->
+
+        {% if error %}
+        <div class=" error flex">
+            <p id="error" class="ff-normal flex fs-300"><span style="color: red; display: grid; text-align: center; align-content: center;">{{ error }}</span>
+                <button id="btn" class="ff-normal fs-300" onclick="deleteParagraph()"><i class="fa-solid fa-xmark"></i></button>
+            </p>
+        </div>
+        {% endif %}     
+    
+        {% if result %}
+        <div id="error" class="flex">
+            <p  class="ff-normal flex fs-300"><span style="color: rgba(28, 255, 39,1); display: grid; text-align: center; align-content: center;">{{ result }}</span>
+                <button id="btn" class="ff-normal fs-300" onclick="deleteParagraph()"><i class="fa-solid fa-xmark"></i></button>
+            </p>
+        </div>
+        {% endif %}    
+                
         <!-- Hero Banner -->
         <div class="grid-container">
             <div class="hero-banner">
@@ -134,22 +151,6 @@
         </div>
     </section>
     <!-- /Contacts -->
-
-    {% if error %}
-    <div class=" error flex">
-        <p id="error" class="ff-normal flex fs-300"><span style="color: red; display: grid; text-align: center; align-content: center;">{{ error }}</span>
-            <button id="btn" class="ff-normal fs-300" onclick="deleteParagraph()"><i class="fa-solid fa-xmark"></i></button>
-        </p>
-    </div>
-    {% endif %}     
-
-    {% if result %}
-    <div class=" error flex">
-        <p id="error" class="ff-normal flex fs-300"><span style="color: rgba(28, 255, 39,1); display: grid; text-align: center; align-content: center;">{{ result }}</span>
-            <button id="btn" class="ff-normal fs-300" onclick="deleteParagraph()"><i class="fa-solid fa-xmark"></i></button>
-        </p>
-    </div>
-    {% endif %}    
 
     <!-- Footer -->
     <section id="footer">

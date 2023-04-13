@@ -424,14 +424,14 @@ p {
 }
 
 /* errors */
-.error{
+#error{
     margin: auto;
     justify-content: center;
     height: 36px;
-    width: 320px;
+    width: 380px;
     border-radius: 5px;
 }
-#error{
+#error p{
     justify-content: center;
     gap: 0.3rem;
 }
@@ -440,4 +440,5 @@ p {
     border: none;
     background-color: #fff;
     color: #1678F2;    
+    cursor: pointer; 
 }

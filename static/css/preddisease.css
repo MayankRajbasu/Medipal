@@ -73,3 +73,23 @@ form button{
 .predict-container{
     padding-top: 0.5rem;
 }
+
+/* errors */
+#error{
+    margin: auto;
+    justify-content: center;
+    height: 36px;
+    width: 380px;
+    border-radius: 5px;
+}
+#error p{
+    justify-content: center;
+    gap: 0.3rem;
+}
+#btn{
+    outline: none;
+    border: none;
+    background-color: #fff;
+    color: #1678F2;   
+    cursor: pointer; 
+}

@@ -1,12 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+
+    <!--Custom Css-->
+    <link href="../static/css/predict.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="../static/css/preddisease.css" rel="stylesheet" type="text/css" media="all" />
+
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <title>Predict Heart</title>
 </head>
+
 <body>
-    
+    <!-- Header -->
+    <div class="main-top">
+        <div class="primary-header flex">
+            <div>
+                <a href="/"><span class="logo"></span></a>
+            </div>
+            <!-- button-nav -->
+            <!-- <button type="button" class="nav-toggler" aria-controls="primary-navigation" aria-expanded="false">
+                    <span></span>
+                </button> -->
+            <!-- Navigation -->
+            <nav>
+                <ul id="primary-navigation" data-visible="false" class="primary-navigation flex">
+                    <li><a class=" active ff-normal fs-300 " href="/">Home</a></li>
+                    <li><a class="ff-normal fs-300 " href="/Predict/cancer">Predict Cancer</a></li>
+                    <li><a class="ff-normal fs-300 " href="/Predict/liver">Predict Liver</a></li>
+                    <li><a class="ff-normal fs-300 " href="/Predict/diabetes">Predict Daiabetes</a></li>
+                    <form><button class="ff-normal fs-300 navbtn" formaction="{{url_for('home')}}">Login</button>
+                    </form>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <!-- /Header -->
+
+    <section id="form-container">
+        <div class="header ff-serif fs-500"><u>Predict about Heart</u></div>
+
+        {% if error %}
+        <div id="error" class=" flex">
+            <p class="ff-normal flex fs-300"><span
+                    style="color: red; display: grid; text-align: center; align-content: center;">{{ error }}</span>
+                <button id="btn" class="ff-normal fs-300" onclick="deleteParagraph()"><i
+                        class="fa-solid fa-xmark"></i></button>
+            </p>
+        </div><br>
+        {% endif %}
+
+        <form method="POST">
+            <div class="patient-record flex">
+                <input class="forminput" type="text" name="name" placeholder="Name"><!-- comment -->
+                <input class="forminput" type="text" name="email" placeholder="Email">
+                <input class="forminput" type="text" maxlength="10" name="phone" placeholder="Phone">
+            </div>
+            <hr class="hr">
+
+            <div class="predict-container">
+                <input class="forminput" type="text" name="Age" placeholder="Age "><br><br>
+                <input class="forminput" type="text" name="Sex" placeholder="Gender (Female:0, Male:1) "><br><br>
+                <input class="forminput" type="text" name="ChestPainType"
+                    placeholder="ChestPain Type (Mild:0 , Normal:1, Extreme:2) "><br><br>
+                <input class="forminput" type="text" name="RestingBP" placeholder="Rest BP Count"><br><br>
+                <input class="forminput" type="text" name="Cholesterol" placeholder="Cholesterol level"><br><br>
+                <input class="forminput" type="text" name="FastingBS" placeholder="Fasting Blood Sugar level "><br><br>
+                <input class="forminput" type="text" name="RestingECG" placeholder="Rest ECG (Normal:0, High:1)"><br><br>
+                <input class="forminput" type="text" name="MaxHR" placeholder="Heart Rate Count"><br><br>
+                <input class="forminput" type="text" name="ExerciseAngina"
+                    placeholder="Feel Tired on Exercise (No:0, Yes:1)"><br><br>
+                <input class="forminput" type="text" name="Oldpeak"
+                    placeholder="Regular Depression (No:0, Yes:1) "><br><br>
+                <input class="forminput" type="text" name="ST_Slope"
+                    placeholder="Depression level (No Depression:0, Low:1, High:2)"><br><br>
+            </div>
+            <button type="submit" name="btn" formaction="{{url_for('result_heart')}}" value="Submit">Submit</button><br>
+        </form>
+    </section>
+
+    <script src="../static/script.js"></script>
 </body>
+
 </html>
