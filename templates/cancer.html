@@ -1,12 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Predict Cancer</title>
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+
+    <!--Custom Css-->
+    <link href="../static/css/predict.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="../static/css/preddisease.css" rel="stylesheet" type="text/css" media="all" />
+
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Predict Breast Cancer</title>
 </head>
+
 <body>
-    
+    <!-- Header -->
+    <div class="main-top">
+        <div class="primary-header flex">
+            <div>
+                <a href="/"><span class="logo"></span></a>
+            </div>
+
+            <nav>
+                <ul id="primary-navigation" data-visible="false" class="primary-navigation flex">
+                    <li><a class=" active ff-normal fs-300 " href="/">Home</a></li>
+                    <li><a class="ff-normal fs-300 " href="/Predict/heart">Predict Heart</a></li>
+                    <li><a class="ff-normal fs-300 " href="/Predict/liver">Predict Liver</a></li>
+                    <li><a class="ff-normal fs-300 " href="/Predict/diabetes">Predict Daiabetes</a></li>
+                    <form><button class="ff-normal fs-300 navbtn" formaction="{{url_for('home')}}">Login</button>
+                    </form>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <!-- /Header -->
+
+    <section id="form-container">
+        <div class="header ff-serif fs-500"><u>Predict about Breast Cancer</u></div>
+
+        {% if error %}
+        <div id="error" class=" flex">
+            <p class="ff-normal flex fs-300"><span
+                    style="color: red; display: grid; text-align: center; align-content: center;">{{ error }}</span>
+                <button id="btn" class="ff-normal fs-300" onclick="deleteParagraph()"><i
+                        class="fa-solid fa-xmark"></i></button>
+            </p>
+        </div><br>
+        {% endif %}
+
+        <form method="POST">
+            <div class="patient-record flex">
+                <input class="forminput" type="text" name="name" placeholder="Name"><!-- comment -->
+                <input class="forminput" type="text" name="email" placeholder="Email">
+                <input class="forminput" type="text" maxlength="10" name="phone" placeholder="Phone">
+            </div>
+            <hr class="hr">
+
+            <div class="predict-container">
+                <input class="forminput" type="text" name="clump_thickness" placeholder="Clump Thickness (Ranges 1 to 10)"><br><br>
+                <input class="forminput" type="text" name="uniform_cell_size" placeholder="Uniform Cell (Ranges 1 to 10)"><br><br>
+                <input class="forminput" type="text" name="uniform_cell_shape"
+                    placeholder="Cell Shape (Ranges 1 to 10)"><br><br>
+                <input class="forminput" type="text" name="marginal_adhesion" placeholder="Marginal Adhesion (Ranges 1 to 10)"><br><br>
+                <input class="forminput" type="text" name="single_epithelial_size" placeholder="Single Epithelial Size (Ranges 1 to 10)"><br><br>
+                <input class="forminput" type="text" name="bland_chromatin" placeholder="Bland Chromatin (Ranges 1 to 10)"><br><br>
+                <input class="forminput" type="text" name="normal_nucleoli" placeholder="Normal Nucleoli (Ranges 1 to 10)"><br><br>
+                <input class="forminput" type="text" name="mitoses" placeholder="Mitoses Level (Ranges 1 to 10)"><br><br>
+            </div>
+            <button type="submit" name="btn" formaction="{{url_for('result_Bcancer')}}" value="Submit">Submit</button><br>
+        </form>
+    </section>
+
+    <script src="../static/script.js"></script>
 </body>
+
 </html>

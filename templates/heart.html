@@ -25,15 +25,10 @@
             <div>
                 <a href="/"><span class="logo"></span></a>
             </div>
-            <!-- button-nav -->
-            <!-- <button type="button" class="nav-toggler" aria-controls="primary-navigation" aria-expanded="false">
-                    <span></span>
-                </button> -->
-            <!-- Navigation -->
             <nav>
                 <ul id="primary-navigation" data-visible="false" class="primary-navigation flex">
                     <li><a class=" active ff-normal fs-300 " href="/">Home</a></li>
-                    <li><a class="ff-normal fs-300 " href="/Predict/cancer">Predict Cancer</a></li>
+                    <li><a class="ff-normal fs-300 " href="/Predict/cancer">Predict Breast Cancer</a></li>
                     <li><a class="ff-normal fs-300 " href="/Predict/liver">Predict Liver</a></li>
                     <li><a class="ff-normal fs-300 " href="/Predict/diabetes">Predict Daiabetes</a></li>
                     <form><button class="ff-normal fs-300 navbtn" formaction="{{url_for('home')}}">Login</button>
@@ -72,9 +67,9 @@
                     placeholder="ChestPain Type (Mild:0 , Normal:1, Extreme:2) "><br><br>
                 <input class="forminput" type="text" name="RestingBP" placeholder="Rest BP Count"><br><br>
                 <input class="forminput" type="text" name="Cholesterol" placeholder="Cholesterol level"><br><br>
-                <input class="forminput" type="text" name="FastingBS" placeholder="Fasting Blood Sugar level "><br><br>
+                <input class="forminput" type="text" name="FastingBS" placeholder="Fasting Blood Sugar (Normal Range:0, Above 126mg/dl:1) "><br><br>
                 <input class="forminput" type="text" name="RestingECG" placeholder="Rest ECG (Normal:0, High:1)"><br><br>
-                <input class="forminput" type="text" name="MaxHR" placeholder="Heart Rate Count"><br><br>
+                <input class="forminput" type="text" name="MaxHR" placeholder="Maximum Heart Rate Count"><br><br>
                 <input class="forminput" type="text" name="ExerciseAngina"
                     placeholder="Feel Tired on Exercise (No:0, Yes:1)"><br><br>
                 <input class="forminput" type="text" name="Oldpeak"

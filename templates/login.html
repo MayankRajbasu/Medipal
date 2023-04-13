@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,30 +10,33 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-   
+
     <!--Custom Css-->
-    <link href="../static/css/index.css" rel="stylesheet" type="text/css" media="all"/>    
-    <link href="../static/css/regis.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="../static/css/index.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="../static/css/regis.css" rel="stylesheet" type="text/css" media="all" />
 
     <title>Register</title>
 </head>
+
 <body>
     <div class="main-top">
-    <div class="primary-header flex">
-        <div>
-            <a href="/"><span class="logo"></span></a>
+        <div class="primary-header flex">
+            <div>
+                <a href="/"><span class="logo"></span></a>
+            </div>
+            <nav>
+                <ul id="primary-navigation" data-visible="false" class="primary-navigation flex">
+                    <form><button class="ff-normal fs-300 navbtn" formaction="{{url_for('home')}}">Home</button></form>
+                </ul>
+            </nav>
         </div>
-        <nav>
-            <ul id="primary-navigation" data-visible="false" class="primary-navigation flex">
-                <form><button class="ff-normal fs-300 navbtn" formaction="{{url_for('home')}}">Home</button></form>              
-            </ul>
-        </nav>
-    </div>
     </div>
     {% if error %}
     <div id="error" class=" flex">
-        <p  class="ff-normal flex fs-300"><span style="color: red; display: grid; text-align: center; align-content: center;">{{ error }}</span>
-            <button id="btn" class="ff-normal fs-300" onclick="deleteParagraph()"><i class="fa-solid fa-xmark"></i></button>
+        <p class="ff-normal flex fs-300"><span
+                style="color: red; display: grid; text-align: center; align-content: center;">{{ error }}</span>
+            <button id="btn" class="ff-normal fs-300" onclick="deleteParagraph()"><i
+                    class="fa-solid fa-xmark"></i></button>
         </p>
     </div>
     {% endif %}
@@ -46,13 +50,14 @@
             <form action="/log_submit" method="POST">
                 <input class="forminput" type="text" name="name" placeholder="FullName"><br><br><!-- comment -->
                 <input class="forminput" type="text" name="licence" placeholder="Doctor's Licence"><br><br>
-                
+
                 <button type="submit" name="btn" value="Submit">Login</button><br>
             </form>
-            <a href="/reg" ><span>Not Registered?</span></a>
+            <a href="/reg"><span>Not Registered?</span></a>
         </div>
     </div>
 
     <script src="../static/script.js"></script>
 </body>
+
 </html>
