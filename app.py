@@ -201,7 +201,7 @@ def result_liver():
         return redirect(url_for('blog_liver', error="You Have low risk for Liver Diseases."))
     return redirect(url_for('blog_liver', error="You have very high risk for Liver Diseases."))
 
-@app.route("/Blogs/liver")
+@app.route("/Blogs/Liver")
 def blog_liver():
     error = request.args.get('error')
     result = request.args.get('result')
@@ -242,7 +242,7 @@ def blog_diabetes():
     error = request.args.get('error')
     result = request.args.get('result')
     post = collection.find_one({'_id': '4'})
-    return render_template('blogs.html', post=post,error=error,result=result)
+    return render_template('blog_diab.html', post=post,error=error,result=result)
 
 ####################################### Main Run #######################################
 
