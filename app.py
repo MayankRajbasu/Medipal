@@ -18,7 +18,7 @@ client = MongoClient("mongodb://localhost:27017")
 db = client.MediPal
 collection = db['Blogs']
 
-####################################### General Routes #######################################
+####################################### Home Routes #######################################
 
 @app.route("/")
 def home():
@@ -26,15 +26,12 @@ def home():
     result = request.args.get('result')
     return render_template("index.html", error=error,result=result)
 
+####################################### Register Doctors #######################################
+
 @app.route("/reg")
 def register():
     error = request.args.get('error')
-    return render_template("register.html",error=error)    
-
-@app.route("/login")
-def login():
-    error = request.args.get('error')
-    return render_template("login.html", error=error)
+    return render_template("register.html",error=error)   
 
 @app.route("/reg_submit", methods=['POST'])
 def reg_sumbit():
@@ -51,8 +48,14 @@ def reg_sumbit():
     if not Name or not Phone or not Email or not Speciality or not License or not Years:
         return redirect(url_for('register', error="Please fill out all feild"))
     db.Doctors.insert_one({"Name": Name,"Phone":Phone,"Email": Email,"Department":Speciality,"License":License,"Practice":Years}) 
-    # print(Name,Phone,Email,Speciality,License,Years)
     return redirect(url_for("login"))
+
+####################################### Login #######################################
+
+@app.route("/login")
+def login():
+    error = request.args.get('error')
+    return render_template("login.html", error=error)
 
 @app.route("/log_submit", methods=['POST'])
 def log_submit():
@@ -68,6 +71,8 @@ def log_submit():
         return redirect(url_for("home"))
     return redirect((url_for("login", error="Not Registred User. Register Yourself")))
 
+####################################### Feedback Website #######################################
+
 @app.route("/feed_submit",methods=['POST'])
 def feed_submit():
     Feedback = request.form
@@ -80,6 +85,8 @@ def feed_submit():
     
     return redirect(url_for("home",result="Thank you for your Feedback!") )
 
+####################################### Consult & Predict #######################################
+
 @app.route("/Consult")
 def consult_doc():
     return render_template("consult.html")
@@ -88,6 +95,24 @@ def consult_doc():
 def predict():
     return render_template("predict.html")
 
+####################################### Feedback Doctors #######################################
+
+@app.route("/doc_feed")
+def doc_feed():
+    error = request.args.get('error')
+    return render_template("doc_feedback.html",error=error)
+
+@app.route("/doc_feed_submit",methods=['POST'])
+def doc_feed_submit():
+    Feedback = request.form
+    email = Feedback['email']
+    comment = Feedback['comment']
+    
+    if not email or not comment:
+        return redirect(url_for("doc_feed", error="Please fill out all feild for your Feedback"))
+    db.Doc_Feedbacks.insert_one({"Email":email,"Comments":comment})
+    
+    return redirect(url_for("home",result="Thank you for your Feedback to our Doctors!") )
 
 ####################################### Heart Diseases #######################################
 

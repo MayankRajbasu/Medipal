@@ -76,7 +76,7 @@ p {
 }
 /* Hero */
 /* Header */
-.primary-header div{
+.primary-header .div-logo{
     padding-left: 4.5rem;
 }
 .logo{
@@ -103,6 +103,7 @@ p {
 .primary-navigation{
     list-style: none;
     padding-right: 4.5rem;
+    margin-bottom: 0px;
 }
 .primary-navigation li {
     padding: 8px 0px;
@@ -428,10 +429,11 @@ p {
     margin: auto;
     justify-content: center;
     height: 36px;
-    width: 380px;
+    width: 100%;
     border-radius: 5px;
 }
 #error p{
+
     justify-content: center;
     gap: 0.3rem;
 }

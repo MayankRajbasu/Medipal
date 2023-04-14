@@ -182,11 +182,14 @@ p {
     padding: 0.6rem;
 }
 .event-desc p{
-    text-align:justify;
+    justify-content: center;
+    text-align:center;
     font-size: 1rem;
     padding: 0 0.9rem;
 }
-
+.event-desc p i{
+    font-size: 25px;
+}
 .main-container{
     padding: 0rem;
 }
