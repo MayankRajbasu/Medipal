@@ -65,9 +65,9 @@ The following technologies and libraries were used to develop this application:
 > This project is licensed under the MIT License.
 
 ## Contact
-For any questions or inquiries, please contact @Mayank-902.
+For any questions or inquiries, please contact [Mayank-902] at [mayank.09raj@gmail.com].
 
-Happy Disease Prediction! :stethoscope: :heart:
+> Happy Disease Prediction! :stethoscope: :heart:
 
 
 
