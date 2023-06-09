@@ -43,7 +43,7 @@ python app.py
 
 2. Fill in the necessary information in the input fields provided.
 
-3. Click the **"Predict"** button to obtain the prediction for the possibility of diseases.
+3. Click the **`Predict`** button to obtain the prediction for the possibility of diseases.
 
 4. The application will display the predicted diseases along with their corresponding probabilities.
 
@@ -64,6 +64,8 @@ The machine learning model was trained on the provided dataset using appropriate
 ## License
 > This project is licensed under the MIT License.
 
+## Contact
+For any questions or inquiries, please contact @Mayank-902.
 Happy Disease Prediction! :stethoscope: :heart:
 
 
