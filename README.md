@@ -56,16 +56,17 @@ The following technologies and libraries were used to develop this application:
 - Machine Learning (ML) libraries (e.g., scikit-learn, TensorFlow, PyTorch)
 
 ## Dataset
-The application employs a carefully curated dataset that was used to train the machine learning model. The dataset contains relevant features and labeled instances of various diseases.
+> The application employs a carefully curated dataset that was used to train the machine learning model. The dataset contains relevant features and labeled instances of various diseases.
 
 ## Model Training
-The machine learning model was trained on the provided dataset using appropriate algorithms and techniques. The training process involved feature engineering, model selection, and performance optimization.
+> The machine learning model was trained on the provided dataset using appropriate algorithms and techniques. The training process involved feature engineering, model selection, and performance optimization.
 
 ## License
 > This project is licensed under the MIT License.
 
 ## Contact
 For any questions or inquiries, please contact @Mayank-902.
+
 Happy Disease Prediction! :stethoscope: :heart:
 
 
