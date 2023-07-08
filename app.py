@@ -1,5 +1,7 @@
 from flask import Flask, render_template,request,redirect,url_for,session
+import os
 from pymongo import MongoClient
+from dotenv import load_dotenv
 import pandas as pd
 import numpy as np
 import pickle
@@ -11,10 +13,11 @@ b_cancermodel= pickle.load(open('b_cancermodel.pkl', 'rb'))
 
 app = Flask(__name__)
 app.secret_key = 'super secret key'
+load_dotenv()
 
 ####################################### connect to MongoDB Atlas #######################################
 
-client = MongoClient("mongodb://localhost:27017")
+client = MongoClient(os.environ.get('CONNECTION_STRING'))
 db = client.MediPal
 collection = db['Blogs']
 

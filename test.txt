@@ -1,0 +1,15 @@
+@app.route("/login")
+def login():
+    return render_template("login.html") 
+
+@app.route("/reg_submit", methods=['POST'])
+def reg_sumbit():
+    #     DoctorDetails = request.form
+    #     Name = DoctorDetails['name']
+    #     Phone = DoctorDetails['phone']
+    #     Email = DoctorDetails['email']
+    #     Speciality = DoctorDetails['speciality']
+    #     License = DoctorDetails['liscense']
+    #     Years = DoctorDetails['years']
+    #     # print(Name,Phone,Email,Speciality,License,Years)    
+    return redirect(url_for("login"))
