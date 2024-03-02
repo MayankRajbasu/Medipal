@@ -66,7 +66,7 @@ The following technologies and libraries were used to develop this application:
 
 ## Contact
 For any questions or inquiries, please contact:
-- [@Mayank-902](https://github.com/Mayank-902) at mayank.09raj@gmail.com
+- [@Mayank-902](https://github.com/MayankRajbasu/) at mayank.09raj@gmail.com
 - [@mounishvatti](https://github.com/mounishvatti) at mounishvatti2002@gmail.com
 
  Happy Disease Prediction! :stethoscope: :heart:
